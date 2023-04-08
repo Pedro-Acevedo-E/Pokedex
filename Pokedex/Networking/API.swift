@@ -10,8 +10,12 @@ import Foundation
 struct API {
     static let baseURLString = "https://pokeapi.co/api/v2/"
     
-    static func getURLForPokemonList(offset: Int, limit: Int) -> String {
+    static func getURLForPokemonSpeciesList(offset: Int, limit: Int) -> String {
         return "\(baseURLString)pokemon-species?offset=\(offset))&limit=\(limit)"
+    }
+    
+    static func getURLForPokemonList(offset: Int, limit: Int) -> String {
+        return "\(baseURLString)pokemon?offset=\(offset))&limit=\(limit)"
     }
     
     static func getURLForPokemonDetails(id: Int) -> String {
