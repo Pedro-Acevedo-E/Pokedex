@@ -16,25 +16,30 @@ struct MainPokedexView: View {
     ]
     
     var body: some View {
-        ZStack {
-            BackgroundView()
-            ScrollView {
-                if isLoading {
-                    ProgressView().progressViewStyle(.circular)
-                } else {
-                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                        ForEach(pokemonViewModel.pokemonList, id: \.id) { poke in
-                            PokemonCellView(pokemonElement: poke)
+        NavigationView {
+            ZStack {
+                BackgroundView()
+                ScrollView {
+                    if isLoading {
+                        ProgressView().progressViewStyle(.circular)
+                    } else {
+                        LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+                            ForEach(pokemonViewModel.pokemonList, id: \.id) { poke in
+                                PokemonCellView(pokemonElement: poke)
+                            }
                         }
                     }
                 }
+                .task {
+                    isLoading = true
+                    await pokemonViewModel.loadList()
+                    isLoading = false
+                }
+                .padding()
             }
-            .task {
-                isLoading = true
-                await pokemonViewModel.loadList()
-                isLoading = false
-            }
-            .padding()
+            .navigationTitle("Pokédex")
+            .navigationBarTitleDisplayMode(.large)
+            .navigationViewStyle(.stack)
         }
     }
 }
