@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51B085529E5DDC400D1FD97 /* MainPokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B085429E5DDC400D1FD97 /* MainPokedexView.swift */; };
+		D51B085729E5E00600D1FD97 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B085629E5E00600D1FD97 /* PokemonCellView.swift */; };
 		D5EC693429E1E71400B40A16 /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC693329E1E71400B40A16 /* PokedexApp.swift */; };
 		D5EC693629E1E71400B40A16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC693529E1E71400B40A16 /* ContentView.swift */; };
 		D5EC693829E1E71400B40A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EC693729E1E71400B40A16 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51B085429E5DDC400D1FD97 /* MainPokedexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPokedexView.swift; sourceTree = "<group>"; };
+		D51B085629E5E00600D1FD97 /* PokemonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
 		D5EC693029E1E71400B40A16 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EC693329E1E71400B40A16 /* PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApp.swift; sourceTree = "<group>"; };
 		D5EC693529E1E71400B40A16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				D5EC693529E1E71400B40A16 /* ContentView.swift */,
+				D51B085429E5DDC400D1FD97 /* MainPokedexView.swift */,
+				D51B085629E5E00600D1FD97 /* PokemonCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +336,8 @@
 				D5EC693629E1E71400B40A16 /* ContentView.swift in Sources */,
 				D5EC693429E1E71400B40A16 /* PokedexApp.swift in Sources */,
 				D5EC697729E1FF1100B40A16 /* DetailsService.swift in Sources */,
+				D51B085729E5E00600D1FD97 /* PokemonCellView.swift in Sources */,
+				D51B085529E5DDC400D1FD97 /* MainPokedexView.swift in Sources */,
 				D5EC697129E1F6DF00B40A16 /* PokemonDetails.swift in Sources */,
 				D5EC696529E1EA7000B40A16 /* PokemonViewModel.swift in Sources */,
 				D5EC696F29E1F51400B40A16 /* Pokemon.swift in Sources */,

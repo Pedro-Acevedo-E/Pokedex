@@ -85,21 +85,6 @@ extension Pokemon {
         )
     }
     
-    init(name: String, id: Int) {
-        self.init(
-            id: id,
-            name: name,
-            types: ["???"],
-            artworkURL: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/error.png"),
-            height: Measurement(value: Double(0.0), unit: UnitLength.decimeters),
-            weight: Measurement(value: Double(0.0), unit: UnitMass.grams),
-            abilities: [PokemonAbilities(ability: PokemonResult(name: "", url: ""), isHidden: true, slot: 1)],
-            baseStats: [PokemonStats(baseStat: 0, effort: 0, stat: PokemonResult(name: "", url: ""))],
-            moves: [PokemonMoves(move: PokemonResult(name: "", url: ""), versionGroupDetails: [])],
-            baseSpeciesName: ""
-        )
-    }
-    
     static func getPokemonLevelUpMoves(moves: [PokemonMoves]) -> [PokemonMoves] {
         let levelUpMoves = moves.filter { move in
             move.versionGroupDetails.last?.moveLearnMethod.name == "level-up"
